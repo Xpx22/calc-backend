@@ -3,8 +3,8 @@ const router = express.Router();
 
 const persistenceController = require("../controller/persistenceController");
 
-router.post("/v1/persist", persistenceController.persistNumber);
+router.get("/v1/storage", persistenceController.readNumber);
 
-router.get("/v1/read", persistenceController.readNumber);
+router.post("/v1/storage", persistenceController.persistNumber);
 
 module.exports = router;
